@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Run_AC_Identity.Models;
 
 namespace Run_AC_Identity.Data
 {
@@ -10,5 +11,6 @@ namespace Run_AC_Identity.Data
         {
 
         }
+        public DbSet<Member> Members {get; set;}
     }
 }
