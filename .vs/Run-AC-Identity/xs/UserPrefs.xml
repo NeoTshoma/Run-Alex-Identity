@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{9F1619AA-AA04-451A-8661-09610244B31B}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Run-AC-Identity/appsettings.Development.json">
+    <Files>
+      <File FileName="Run-AC-Identity/appsettings.Development.json" Line="7" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Run-AC-Identity" expanded="True">
+            <Node name="Run-AC-Identity" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="appsettings.json" expanded="True">
+                <Node name="appsettings.Development.json" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Run-AC-Identity PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
