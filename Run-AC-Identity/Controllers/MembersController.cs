@@ -4,33 +4,38 @@ using Run_AC_Identity.Models;
 
 namespace Run_AC_Identity.Controllers;
 
-[ApiController]
-[Route("[controller]")]
-public class MembersController: ControllerBase {
+// [ApiController]
+[Route("api/[controller]")]
+public class MembersController: Controller {
     private IMembersRepository _membersRepository;
 
     public MembersController(IMembersRepository membersRepository) {
         _membersRepository = membersRepository;
     }
 
-    [HttpGet]
+    [HttpGet("get-members")]
+    
     public async Task<IEnumerable<Member>> GetMembers() {
         return await _membersRepository.GetAllAsync();
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("get-member/{id}")]
     public async Task<Member?> GetMember(string id) {
         return await _membersRepository.GetAsync(id);
     }
 
-    [HttpPost]
+    [HttpPost("create-member")]
     public async Task<Member?> CreateMember(Member member) {
         return await _membersRepository.AddAsync(member);
     }
 
-    [HttpPost]
-    [Route("add-multiple")]
+    [HttpPost("add-multiple")]
     public async Task<List<Member>> CreateMembersRange(List<Member> members) {
         return await _membersRepository.AddRange(members);
+    }
+
+    [HttpGet("get-member-by-id-number/{idNumber}")]
+    public async Task<Member?> GetMemberByIdNumber(string idNumber) {
+        return await _membersRepository.SearchByIdNumber(idNumber);
     }
 }
