@@ -11,8 +11,8 @@ namespace Run_AC_Identity {
             _dbContext = dbContext;
         }
 
-        public async Task<T?> GetAsync(string id) {
-            if (id == null) {
+        public async Task<T?> GetAsync(Guid id) {
+            if (id == Guid.Empty) {
                 return null;
             }
             return await _dbContext.Set<T>().FindAsync(id);
@@ -36,13 +36,13 @@ namespace Run_AC_Identity {
             return entities;
         }
 
-        public async Task<bool> Exists(string id) {
+        public async Task<bool> Exists(Guid id) {
             var entity = await GetAsync(id);
 
             return entity != null;
         }
 
-        public async Task DeleteAsync(string id) {
+        public async Task DeleteAsync(Guid id) {
             var entity = await GetAsync(id);
 
             if (entity != null) {
