@@ -1,9 +1,11 @@
 using Run_AC_Identity.Models;
 using RunACIdentity.Migrations;
 
-namespace Run_AC_Identity.Interfaces {
-    public interface IMembersRepository: IGenericRepository<Member>
+namespace Run_AC_Identity.Interfaces
+{
+    public interface IMembersRepository : IGenericRepository<Member>
     {
+        public Task<Member?> SearchByIdNumber(string idNumber);
 
     }
 }
