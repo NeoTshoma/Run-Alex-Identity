@@ -4,7 +4,7 @@ using Run_AC_Identity.Models;
 
 namespace Run_AC_Identity.Controllers;
 
-// [ApiController]
+[ApiController]
 [Route("api/[controller]")]
 public class MembersController: Controller {
     private IMembersRepository _membersRepository;
@@ -20,7 +20,7 @@ public class MembersController: Controller {
     }
 
     [HttpGet("get-member/{id}")]
-    public async Task<Member?> GetMember(string id) {
+    public async Task<Member?> GetMember(Guid id) {
         return await _membersRepository.GetAsync(id);
     }
 
